@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fixed Header Example</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        
+        body {
+            margin-top: 80px;
+            font-family: Arial, sans-serif;
+            min-height: 200vh; /* Ensures the page is long enough to scroll */
+            padding: 10px;
+        }
+        /* --- Header Positioning and Layout --- */
+.fixed-header {
+    /* KEY PROPERTY: Fixes the header to the viewport */
+    position: fixed; 
+    
+    /* Ensures it stays at the very top */
+    top: 0; 
+    left: 0;
+    
+    /* Makes the header span the entire width */
+    width: 100%; 
+    
+    /* Basic styling for visibility */
+    background-color: #333;
+    color: white;
+    height: 60px; /* Set a fixed height */
+    z-index: 1000; /* Ensures it sits above other content */
+
+    /* Flexbox for Left/Right alignment */
+    display: flex;
+    justify-content: space-between; /* Pushes logo and nav to opposite ends */
+    align-items: center; /* Vertically centers content */
+    padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Logo Styling --- */
+.logo h1 {
+    font-size: 24px;
+    margin: 0; /* Remove default h1 margin */
+}
+
+/* --- Navigation Styling --- */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Arranges links horizontally */
+}
+
+nav li {
+    margin-left: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #00ffcc; /* Teal highlight on hover */
+}
+    </style>
+</head>
+<body>
+
+    <header class="fixed-header">
+        <div class="logo">
+            <h1>My Logo</h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Page Content Below Header</h2>
+        <p>Start scrolling down to see the header remain fixed at the top.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis, itaque? Error exercitationem possimus ipsum voluptate? Est quaerat iure saepe veniam pariatur sit, voluptatum excepturi numquam cupiditate laboriosam libero dicta </p>
+         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis, itaque? Error exercitationem possimus ipsum voluptate? Est quaerat iure saepe veniam pariatur sit, voluptatum excepturi numquam cupiditate laboriosam libero dicta </p>
+    </main>
+    
+</body>
+</html>
