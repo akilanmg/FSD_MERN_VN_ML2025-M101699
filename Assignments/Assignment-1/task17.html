@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+    
+    .dashboard-layout {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr; 
+        grid-template-rows: auto 70vh auto;
+        grid-template-areas:
+            "header header header"
+            "sidebar main-content widget-panel"
+            "footer footer footer";
+        
+        gap: 10px; 
+        height: 100vh; 
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    
+    .dashboard-layout > * {
+        background-color: #ecf0f1;
+        padding: 15px;
+        text-align: center;
+        font-family: sans-serif;
+        font-weight: bold;
+    }
+
+    
+    .header {
+        grid-area: header;
+        background-color: #3498db;
+        color: white;
+    }
+    .footer {
+        grid-area: footer;
+        background-color: #34495e;
+        color: white;
+    }
+
+    .sidebar {
+        grid-area: sidebar;
+        background-color: #d1f2eb;
+    }
+    .main-content {
+        grid-area: main-content;
+        background-color: #f7f9f9;
+        font-size: 1.2em;
+    }
+    .widget-panel {
+        grid-area: widget-panel;
+        background-color: #d6eaf8;
+    }
+</style>
+</head>
+<body>
+    <div class="dashboard-layout">
+    <header class="header">Header</header>
+    <aside class="sidebar">Sidebar </aside>
+    <main class="main-content">Main Content Area </main>
+    <section class="widget-panel">Widget Panel </section>
+    <footer class="footer">Footer</footer>
+</div>
+</body>
+</html>
