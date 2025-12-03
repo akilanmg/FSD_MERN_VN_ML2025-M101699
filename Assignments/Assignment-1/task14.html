@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Positioning Examples</title>
+    <style>
+        
+        body { 
+            
+            min-height: 200vh; 
+            margin: 0; 
+            padding: 20px 20px 180px 20px; 
+            font-family: Arial, sans-serif;
+        }
+       
+.box {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    text-align: center;
+    line-height: 150px;
+    font-weight: bold;
+    color: white;
+    box-sizing: border-box;
+    display: inline-block; 
+}
+
+
+.static-box {
+    background-color: #007bff; 
+    position: static; 
+}
+
+
+.relative-box {
+    background-color: #28a745; 
+    position: relative; 
+    left: 20px; 
+    top: 20px;
+}
+
+
+.parent-absolute {
+   
+    position: relative; 
+    width: 400px;
+    height: 300px;
+    margin: 50px 10px;
+    border: 3px solid #6f42c1; 
+    padding: 10px;
+    color: #6f42c1;
+    display: block; 
+}
+
+.absolute-box {
+    background-color: #ffc107; 
+    color: #333;
+    position: absolute; 
+    bottom: 0; 
+    right: 0;
+}
+
+
+.fixed-box {
+    background-color: #dc3545;
+    position: fixed; 
+    bottom: 20px; 
+    left: 20px; 
+    z-index: 1000; 
+}
+    </style>
+</head>
+<body>
+
+    <div class="box static-box">Static (Default)</div>
+    
+    <div class="box relative-box">Relative </div>
+
+    <div class="parent-absolute">
+        Parent (relative)
+        <div class="box absolute-box">Absolute (Bottom-Right)</div>
+    </div>
+    
+    <p style="margin-top: 200px;">Scroll down to see the Fixed box stay in place.</p>
+    
+    <div class="box fixed-box">Fixed (Bottom-Left Screen)</div>
+
+</body>
+</html>
